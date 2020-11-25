@@ -15,7 +15,7 @@ import java.util.*;
 
 
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "https://adventskalender-backend.herokuapp.com"})
 @RestController
 @RequestMapping("/advent")
 public class testController {
