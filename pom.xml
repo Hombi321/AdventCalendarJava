@@ -11,7 +11,7 @@
     <groupId>com.adventcalender</groupId>
     <artifactId>adventcalender</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>adventcalender</name>
     <description>Demo project for Spring Boot</description>
 
