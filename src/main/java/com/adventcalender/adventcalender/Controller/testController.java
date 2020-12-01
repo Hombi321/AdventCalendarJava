@@ -17,21 +17,21 @@ import java.util.*;
 
 
 
-@CrossOrigin(origins = {"http://localhost:3000", "https://adventskalender-hombi321.herokuapp.com"})
+@CrossOrigin(origins = {"http://localhost:3000", "https://adventskalenderapp.herokuapp.com"})
 @RestController
 @RequestMapping("/advent")
 public class testController {
     static Calender c = new Calender();
 
 
-    @CrossOrigin(origins = {"http://localhost:3000", "https://adventskalender-hombi321.herokuapp.com"})
+    @CrossOrigin(origins = {"http://localhost:3000", "https://adventskalenderapp.herokuapp.com"})
     @GetMapping("test")
     public List<CalenderDoor> getUsers() throws Exception{
         List<CalenderDoor> users = c.getCalederDoors();
 
         return users;
     }
-    @CrossOrigin(origins = {"http://localhost:3000", "https://adventskalender-hombi321.herokuapp.com"})
+    @CrossOrigin(origins = {"http://localhost:3000", "https://adventskalenderapp.herokuapp.com"})
     @GetMapping("/initial")
     public List<CalenderDoor> initialDoors(){
         List <CalenderDoor> calenderDoors = c.getCalederDoors();
@@ -44,7 +44,7 @@ public class testController {
 
         return returnDoors;
     }
-    @CrossOrigin(origins = {"http://localhost:3000", "https://adventskalender-hombi321.herokuapp.com"})
+    @CrossOrigin(origins = {"http://localhost:3000", "https://adventskalenderapp.herokuapp.com"})
     @PostMapping("post")
     public CalenderDoor printMessage(@RequestParam(value = "date", required = true) final String date) throws Exception{
         //String day = params.substring(params.length() - 2);

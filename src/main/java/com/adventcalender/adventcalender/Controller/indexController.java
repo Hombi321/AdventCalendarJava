@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:3000", "https://adventskalender-hombi321.herokuapp.com"})
+@CrossOrigin(origins = {"http://localhost:3000", "https://adventskalenderapp.herokuapp.com"})
 public class indexController {
 
 
