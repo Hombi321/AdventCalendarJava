@@ -24,14 +24,14 @@ public class testController {
     static Calender c = new Calender();
 
 
-
+    @CrossOrigin(origins = {"http://localhost:3000", "https://adventskalender-hombi321.herokuapp.com:443/"})
     @GetMapping("test")
     public List<CalenderDoor> getUsers() throws Exception{
         List<CalenderDoor> users = c.getCalederDoors();
 
         return users;
     }
-
+    @CrossOrigin(origins = {"http://localhost:3000", "https://adventskalender-hombi321.herokuapp.com:443/"})
     @GetMapping("/initial")
     public List<CalenderDoor> initialDoors(){
         List <CalenderDoor> calenderDoors = c.getCalederDoors();
