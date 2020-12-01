@@ -49,11 +49,11 @@ public class testController {
     public CalenderDoor printMessage(@RequestParam(value = "date", required = true) final String date) throws Exception{
         //String day = params.substring(params.length() - 2);
         //int day2 = Integer.parseInt(day);
-        //LocalDate date = LocalDate.of(2017, 12, day2);
+
         LocalDate n = LocalDate.parse(date);
 
-       // LocalDate now = LocalDate.now();
-       LocalDate now = LocalDate.of(2020,12,24);
+       LocalDate now = LocalDate.now();
+       //LocalDate now = LocalDate.of(2020,12,24);
         LocalDate transferedDate = LocalDate.parse(date);
         CalenderDoor door = null;
         if(now.isBefore(n)){
