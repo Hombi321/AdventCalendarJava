@@ -52,8 +52,8 @@ public class testController {
 
         LocalDate n = LocalDate.parse(date);
 
-       LocalDate now = LocalDate.now();
-       //LocalDate now = LocalDate.of(2020,12,24);
+       //LocalDate now = LocalDate.now();
+       LocalDate now = LocalDate.of(2020,12,24);
         LocalDate transferedDate = LocalDate.parse(date);
         CalenderDoor door = null;
         if(now.isBefore(n)){
@@ -79,7 +79,19 @@ return door;
 
     }
 
+    @CrossOrigin(origins = {"http://localhost:3000", "https://adventskalenderapp.herokuapp.com"})
+    @GetMapping("date")
+    public boolean checkDate(@RequestParam(value = "checkDate", required = true) final String checkDate) throws Exception{
+        boolean returnValue = false;
+        LocalDate n = LocalDate.parse(checkDate);
+        LocalDate now = LocalDate.now();
 
+    if(n.isBefore(now)){
+        returnValue = true;
+    }
+        System.out.println("Das ist eine Ausgabe "+ n +" RETURN: " +returnValue);
+return returnValue;
+    }
     // Dummy method for adding List of Users
     public static void insertDataToCalendar(){
 
@@ -98,7 +110,7 @@ return door;
         CalenderDoor c10 = new CalenderDoor(10, "Bild", LocalDate.of(2020,12,10),  "https://www.siliconrepublic.com/wp-content/uploads/2015/05/Bug-v-feature.jpg");
         CalenderDoor c11= new CalenderDoor(11, "Rezept", LocalDate.of(2020,12,11),  "https://www.swissmilk.ch/de/rezepte-kochideen/rezepte/HWL_BACKEN_1999_12/grittibaenze/");
         CalenderDoor c12 = new CalenderDoor(12, "Bild", LocalDate.of(2020,12,12),  "https://cdn.pixabay.com/photo/2016/11/24/14/00/christmas-tree-1856343_960_720.jpg");
-        CalenderDoor c13= new CalenderDoor(13, "Video", LocalDate.of(2020,12,13),  "https://www.youtube.com/embed/VfLf7A_-1Vw");
+        CalenderDoor c13= new CalenderDoor(13, "Video", LocalDate.of(2020,12,13),  "https://www.youtube.com/embed/FdTqmzWIuZI");
         CalenderDoor c14= new CalenderDoor(14, "Bild", LocalDate.of(2020,12,14),  "https://res.cloudinary.com/teepublic/image/private/s--k3zvSQ65--/t_Preview/b_rgb:000000,c_limit,f_jpg,h_630,q_90,w_630/v1554272032/production/designs/4557261_0.jpg");
         CalenderDoor c15= new CalenderDoor(15, "Rezept", LocalDate.of(2020,12,15),  "https://migusto.migros.ch/de/rezepte/zimtsterne");
         CalenderDoor c16= new CalenderDoor(16, "Bild", LocalDate.of(2020,12,16),  "https://i.pinimg.com/564x/5e/10/e8/5e10e861268c1cf9b2ae2d0a326400d9--blond-jokes-computer-jokes.jpg");
