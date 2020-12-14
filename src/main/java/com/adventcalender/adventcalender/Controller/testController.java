@@ -52,8 +52,8 @@ public class testController {
 
         LocalDate n = LocalDate.parse(date);
 
-       //LocalDate now = LocalDate.now();
-       LocalDate now = LocalDate.of(2020,12,24);
+       LocalDate now = LocalDate.now();
+       //LocalDate now = LocalDate.of(2020,12,24);
         LocalDate transferedDate = LocalDate.parse(date);
         CalenderDoor door = null;
         if(now.isBefore(n)){
@@ -97,9 +97,8 @@ return returnValue;
 
 
         List <CalenderDoor> randomList = new ArrayList<>();
-
         CalenderDoor c1 = new CalenderDoor(1, "Bild", LocalDate.of(2020,12,1), "https://cdn.pixabay.com/photo/2019/11/25/09/02/baking-4651363_960_720.jpg");
-        CalenderDoor c2 = new CalenderDoor(2, "Video", LocalDate.of(2020,12,2), "https://www.youtube.com/embed/Y7s5A2J7dMg");
+        CalenderDoor c2 = new CalenderDoor(2, "Video", LocalDate.of(2020,12,2), "https://www.youtube.com/embed/iTwaxbQCLQo");
         CalenderDoor c3 = new CalenderDoor(3, "Bild", LocalDate.of(2020,12,3),  "https://cdn.pixabay.com/photo/2017/02/14/03/03/ama-dablam-2064522_960_720.jpg");
         CalenderDoor c4 = new CalenderDoor(4, "Video", LocalDate.of(2020,12,4),  "https://www.youtube.com/embed/-AUE4ZrMItI");
         CalenderDoor c5 = new CalenderDoor(5, "Rezept", LocalDate.of(2020,12,5),  "https://www.swissmilk.ch/de/rezepte-kochideen/rezepte/LM201112_34/brunsli/");
