@@ -3,6 +3,8 @@ package com.adventcalender.adventcalender.Controller;
 import com.adventcalender.adventcalender.Model.CalenderDoor;
 import com.adventcalender.adventcalender.Storage.Calender;
 import com.fasterxml.jackson.databind.ObjectReader;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.tomcat.jni.Local;
 import org.springframework.validation.beanvalidation.SpringValidatorAdapter;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +20,7 @@ import java.util.*;
 
 
 @CrossOrigin(origins = {"http://localhost:3000", "https://adventskalenderapp.herokuapp.com"})
+@ApiOperation(value = "AdventController")
 @RestController
 @RequestMapping("/advent")
 public class testController {
