@@ -1,6 +1,7 @@
-package com.adventcalender.adventcalender.Application;
+package com.adventcalender.adventcalender;
 
 
+import com.adventcalender.adventcalender.AdventcalenderApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 

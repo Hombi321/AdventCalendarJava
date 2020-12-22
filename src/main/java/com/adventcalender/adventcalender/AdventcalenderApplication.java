@@ -1,6 +1,6 @@
 package com.adventcalender.adventcalender;
 
-import com.adventcalender.adventcalender.Controller.testController;
+import com.adventcalender.adventcalender.Controller.AdventController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AdventcalenderApplication {
 
     public static void main(String[] args) {
-        testController.insertDataToCalendar();
+        AdventController.insertDataToCalendar();
         SpringApplication.run(AdventcalenderApplication.class, args);
 
 
